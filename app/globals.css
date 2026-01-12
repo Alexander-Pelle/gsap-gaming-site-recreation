@@ -70,6 +70,11 @@
 }
 
 @layer utilities {
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+    clip: rect(0, 0, 0, 0);
+  }
+
   .border-hsla {
     @apply border border-white/20;
   }
@@ -123,7 +128,7 @@
   }
 
   .bento-tilt_1 {
-    @apply relative border border-white/20 col-span-2 overflow-hidden rounded-md transition-transform duration-300 ease-out;
+    @apply relative overflow-hidden rounded-md border border-white/20 transition-transform duration-300 ease-out col-span-2 md:col-span-1;
   }
 
   .bento-tilt_2 {
