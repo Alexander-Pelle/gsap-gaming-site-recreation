@@ -92,6 +92,12 @@ const NavBar = () => {
                   <a 
                     key={index}
                     href={`#${item.toLowerCase()}`}
+                    onClick={(e) => {
+                      if (item !== "About") {
+                        e.preventDefault();
+                        alert("This is just a prototype.");
+                      }
+                    }}
                     className="nav-hover-btn">
                       {item}
                     </a>
